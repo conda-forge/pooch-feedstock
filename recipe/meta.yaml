@@ -1,5 +1,5 @@
 {% set name = "pooch" %}
-{% set version = "1.8.2" %}
+{% set version = "1.9.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,14 +7,11 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 76561f0de68a01da4df6af38e9955c4c9d1a5c90da73f7e40276a5728ec83d10
-  patches:
-    # https://github.com/fatiando/pooch/pull/458
-    - 458_tar_extract_all.diff
+  sha256: de46729579b9857ffd3e741987a2f6d5e0e03219892c167c6578c0091fb511ed
 
 build:
   noarch: python
-  number: 3
+  number: 0
 
 requirements:
   host:
